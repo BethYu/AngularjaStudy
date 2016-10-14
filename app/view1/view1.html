@@ -1,2 +1,89 @@
-<p>testtesttesttesttesttesttestThis is the partial for view 1.</p>
-<p>testtesttesttesttesttesttestThis is the partial for view 1.</p>
+<div class="col-lg-6">
+    <div class="panel-group">
+        <p>{{greeting.text}},Angular</p>
+        <p><a href="#!/view2">下一页</a></p>
+    </div>
+</div>
+<div class="col-lg-6 panel">
+    <div class="panel-body">
+        <div class="panel-group">
+            <button class="btn btn-primary" ng-click="toggleMenu()">toggleMenu</button>
+            <ul ng-show="menuState.show">
+                <li ng-click="stun()">
+                    Stun
+                </li>
+                <li ng-click="disintegrate()">
+                    Disintegrate
+                </li>
+                <li ng-click="erase()">
+                    Erase from history
+                </li>
+            </ul>
+        </div>
+        <div class="panel-group">
+            <div ng-class="{error: isError, warning: isWarning}" class="alert">
+                <button type="button" class="close">×</button>
+                {{messageText}}
+            </div>
+            <button class="btn btn-info" ng-click="showError()">showError</button>
+            <button class="btn btn-default" ng-click="showWarning()">showWarning</button>
+        </div>
+        <div class="panel-group">
+            <p class="text-{{color}}">test color</p>
+            <button class="btn btn-primary" ng-click="setGreen()">setGreen</button>
+        </div>
+        <form class="cmxform form-horizontal tasi-form" id="signupForm" method="get" action="" novalidate="novalidate">
+            <div class="form-group ">
+                <label for="_email" class="control-label col-lg-2">Email</label>
+                <div class="col-lg-10">
+                    <input class="form-control " id="_email" name="email" type="email" ng-model="userInfo.email">
+                </div>
+            </div>
+            <div class="form-group ">
+                <label for="_nickname" class="control-label col-lg-2">nickname</label>
+                <div class="col-lg-10">
+                    <input class=" form-control" id="_nickname" name="nickname" type="text" ng-model="nickname">
+                </div>
+            </div>
+            <div class="form-group ">
+                <label for="_password" class="control-label col-lg-2">Password</label>
+                <div class="col-lg-10">
+                    <input class="form-control " id="_password" name="password" type="" ng-model="userInfo.password">
+                </div>
+            </div>
+            <div class="form-group ">
+                <label for="_confirm_password" class="control-label col-lg-2">Confirm Password</label>
+                <div class="col-lg-10">
+                    <input class="form-control " id="_confirm_password" name="confirm_password" type="" ng-model="userInfo.password">
+                </div>
+            </div>
+            <div class="form-group ">
+                <label for="_graphic_code" class="control-label col-lg-2">Graphic verification code</label>
+                <div class="col-lg-5">
+                    <input type="text" class="checkbox form-control" id="_graphic_code" name="_graphic_code">
+                </div>
+                <div class="col-lg-5">
+                    <img src="" alt="图形验证码"/>
+                </div>
+            </div>
+            <div class="form-group ">
+                <!--<label for="_agree" class="control-label col-lg-2 col-sm-3">Agree to Our Policy</label>-->
+                <div class="col-lg-10 col-lg-offset-2">
+                    <label>
+                        <input type="checkbox"> Agree to Our Policy
+                    </label>
+                    <a href="">用户服务协议</a>
+                    <!--<input type="checkbox" style="width: 20px" class="checkbox form-control" id="_agree" name="agree">-->
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-offset-2 col-lg-10">
+                    <button type="button" class="btn btn-danger"  ng-click="getFormDate()">getFormDate</button>
+                    <button type="button" class="btn btn-warning"  ng-click="setFormDate()">setFormDate</button>
+                    <button type="button" class="btn btn-success"  ng-click="resetFormDate()">resetFormDate</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
